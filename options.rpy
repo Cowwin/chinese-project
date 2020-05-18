@@ -61,7 +61,7 @@ define config.has_voice = True
 ## the player is at the main menu. This file will continue playing into the
 ## game, until it is stopped or another file is played.
 
-# define config.main_menu_music = "main-menu-theme.ogg"
+#define config.main_menu_music = "music/moonlight.mp3"
 
 
 ## Transitions #################################################################
@@ -119,7 +119,7 @@ define config.window_hide_transition = Dissolve(.2)
 ## Controls the default text speed. The default, 0, is infinite, while any other
 ## number is the number of characters per second to type out.
 
-default preferences.text_cps = 0
+default preferences.text_cps = 50
 
 
 ## The default auto-forward delay. Larger numbers lead to longer waits, with 0
@@ -142,7 +142,7 @@ default preferences.afm_time = 15
 ## This generally should not be changed, and if it is, should always be a
 ## literal string, not an expression.
 
-define config.save_directory = "chinese-1588937861"
+define config.save_directory = "chinese"
 
 
 ## Icon ########################################################################
@@ -193,6 +193,11 @@ init python:
 
     build.documentation('*.html')
     build.documentation('*.txt')
+
+## Set this to a string containing your Apple Developer ID Application to enable
+## codesigning on the Mac. Be sure to change it to your own Apple-issued ID.
+
+# define build.mac_identity = "Developer ID Application: Guy Shy (XHTE5H7Z42)"
 
 
 ## A Google Play license key is required to download expansion files and perform
